@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- You can also add or configure plugins by creating files in this `plugins/` folder
 -- Here are some examples:
@@ -8,12 +8,12 @@ return {
 
   -- == Examples of Adding Plugins ==
 
-  "andweeb/presence.nvim",
-  {
-    "ray-x/lsp_signature.nvim",
-    event = "BufRead",
-    config = function() require("lsp_signature").setup() end,
-  },
+  --"andweeb/presence.nvim",
+  --{
+  --  "ray-x/lsp_signature.nvim",
+  --  event = "BufRead",
+  --  config = function() require("lsp_signature").setup() end,
+  --},
 
   -- == Examples of Overriding Plugins ==
 
@@ -23,17 +23,11 @@ return {
     opts = function(_, opts)
       -- customize the dashboard header
       opts.section.header.val = {
-        " █████  ███████ ████████ ██████   ██████",
-        "██   ██ ██         ██    ██   ██ ██    ██",
-        "███████ ███████    ██    ██████  ██    ██",
-        "██   ██      ██    ██    ██   ██ ██    ██",
-        "██   ██ ███████    ██    ██   ██  ██████",
-        " ",
-        "    ███    ██ ██    ██ ██ ███    ███",
-        "    ████   ██ ██    ██ ██ ████  ████",
-        "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-        "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-        "    ██   ████   ████   ██ ██      ██",
+        "__________________________________________________________",
+        "___  ____/_|__  /__    |__  __  |_< /_|__  /_  ___/_  ___/",
+        "__  /_   ___/_ <__  /| |_  /_/ /_  /___/_ <_____ _____  ",
+        "_  __/   ____/ /_  ___ |  _, _/_  / ____/ /____/ /____/ / ",
+        "/_/      /____/ /_/  |_/_/ |_| /_/  /____/ /____/ /____/  ",
       }
       return opts
     end,
