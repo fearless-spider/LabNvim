@@ -47,6 +47,11 @@ return {
     end,
   },
   {
+    "windwp/windline.nvim",
+    event = "BufEnter",
+    config = function() require "wlsample.airline_anim" end,
+  },
+  {
     "windwp/nvim-autopairs",
     config = function(plugin, opts)
       require "astronvim.plugins.configs.nvim-autopairs"(plugin, opts) -- include the default astronvim config that calls the setup call
