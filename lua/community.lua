@@ -22,8 +22,10 @@ return {
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.ruby" },
   { import = "astrocommunity.color.twilight-nvim" },
-  { import = "astrocommunity.colorscheme.cyberdream-nvim" },
+  { import = "astrocommunity.colorscheme.fluoromachine-nvim" },
   { import = "astrocommunity.colorscheme.neofusion-nvim" },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
+  { import = "astrocommunity.colorscheme.poimandres-nvim" },
+  { import = "astrocommunity.colorscheme.eldritch-nvim" },
   { import = "astrocommunity.note-taking.obsidian-nvim" },
 }
