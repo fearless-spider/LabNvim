@@ -2,7 +2,8 @@
 
 LabNvim is an aesthetic and feature-rich neovim config that is extensible and easy to use with a great set of plugins based on AstroNVim.
 
-Programming Packs:
+## Programming Packs:
+
 * Lua
 * rust
 * python
@@ -15,12 +16,14 @@ Programming Packs:
 * cpp
 * ruby
 
-Extras:
+## Extras:
+
 * twilight
 * obsidian
 * markdown
 
-Color schemes:
+## Color schemes:
+
 * fluoromachine
 * neofusion
 * tokyonight
