@@ -1,5 +1,32 @@
 # LabNvim
 
+LabNvim is an aesthetic and feature-rich neovim config that is extensible and easy to use with a great set of plugins based on AstroNVim.
+
+Programming Packs:
+* Lua
+* rust
+* python
+* bash
+* elixir-phoenix
+* go
+* html-css
+* json
+* typescript
+* cpp
+* ruby
+
+Extras:
+* twilight
+* obsidian
+* markdown
+
+Color schemes:
+* fluoromachine
+* neofusion
+* tokyonight
+* poimandres
+* eldritch
+
 ![labnvim start](https://github.com/fearless-spider/LabNvim/blob/master/labnvim_start.png?raw=true)
 
 ![labnvim start](https://github.com/fearless-spider/LabNvim/blob/master/labnvim_code.png?raw=true)
