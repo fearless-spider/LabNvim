@@ -2,7 +2,7 @@
 
 ![labnvim start](https://github.com/fearless-spider/LabNvim/blob/master/labnvim_start.png?raw=true)
 
-![labnvim start](https://github.com/fearless-spider/LabNvim/blob/master/labnvim_start.png?raw=true)
+![labnvim start](https://github.com/fearless-spider/LabNvim/blob/master/labnvim_code.png?raw=true)
 
 ## 🛠️ Installation
 
