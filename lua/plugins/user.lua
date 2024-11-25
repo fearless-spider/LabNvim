@@ -99,7 +99,7 @@ return {
         agents = {
           {
             name = "ChatGPT4o",
-            chat = false,
+            chat = false, -- Disable openAI chat
             command = false,
             -- string with model name or table with model name and parameters
             model = { model = "gpt-4o", temperature = 1.1, top_p = 1 },
