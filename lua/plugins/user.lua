@@ -80,4 +80,52 @@ return {
       )
     end,
   },
+  {
+    "robitx/gp.nvim",
+    config = function()
+      local conf = {
+        -- For customization, refer to Install > Configuration in the Documentation/Readme
+        providers = {
+          openai = {
+            disable = true,
+            endpoint = "https://api.openai.com/v1/chat/completions",
+            -- secret = os.getenv("OPENAI_API_KEY"),
+          },
+          ollama = {
+            disable = false,
+            endpoint = "http://localhost:11434/v1/chat/completions",
+          },
+        },
+        agents = {
+          {
+            name = "ChatGPT4o",
+            chat = false,
+            command = false,
+            -- string with model name or table with model name and parameters
+            model = { model = "gpt-4o", temperature = 1.1, top_p = 1 },
+            -- system prompt (use this to specify the persona/role of the AI)
+            system_prompt = require("gp.defaults").chat_system_prompt,
+          },
+          {
+            provider = "ollama",
+            name = "ChatOllamaLlama3.1-8B",
+            chat = true,
+            command = false,
+            -- string with model name or table with model name and parameters
+            model = {
+              model = "llama3.2",
+              temperature = 0.6,
+              top_p = 1,
+              min_p = 0.05,
+            },
+            -- system prompt (use this to specify the persona/role of the AI)
+            system_prompt = "You are a general AI assistant.",
+          },
+        },
+      }
+      require("gp").setup(conf)
+
+      -- Setup shortcuts here (see Usage > Shortcuts in the Documentation/Readme)
+    end,
+  },
 }
