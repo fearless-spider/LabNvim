@@ -1,8 +1,38 @@
-# AstroNvim Template
+# LabNvim
 
-**NOTE:** This is for AstroNvim v4+
+LabNvim is an aesthetic and feature-rich neovim config that is extensible and easy to use with a great set of plugins based on AstroNVim.
 
-A template for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
+## Programming Packs:
+
+* Lua
+* rust
+* python
+* bash
+* elixir-phoenix
+* go
+* html-css
+* json
+* typescript
+* cpp
+* ruby
+
+## Extras:
+
+* twilight
+* obsidian
+* markdown
+
+## Color schemes:
+
+* fluoromachine
+* neofusion
+* tokyonight
+* poimandres
+* eldritch
+
+![labnvim start](https://github.com/fearless-spider/LabNvim/blob/master/labnvim_start.png?raw=true)
+
+![labnvim start](https://github.com/fearless-spider/LabNvim/blob/master/labnvim_code.png?raw=true)
 
 ## 🛠️ Installation
 
@@ -14,12 +44,6 @@ mv ~/.local/share/nvim ~/.local/share/nvim.bak
 mv ~/.local/state/nvim ~/.local/state/nvim.bak
 mv ~/.cache/nvim ~/.cache/nvim.bak
 ```
-
-#### Create a new user repository from this template
-
-Press the "Use this template" button above to create a new repository to store your user configuration.
-
-You can also just clone this repository directly if you do not want to track your user configuration in GitHub.
 
 #### Clone the repository
 
