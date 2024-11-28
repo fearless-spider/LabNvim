@@ -126,6 +126,11 @@ return {
       require("gp").setup(conf)
 
       -- Setup shortcuts here (see Usage > Shortcuts in the Documentation/Readme)
+      -- Chat commands
+      vim.keymap.set({ "n", "i" }, "<C-g>c", "<cmd>GpChatNew<cr>", { desc = "New Chat" })
+      vim.keymap.set({ "n", "i" }, "<C-g>t", "<cmd>GpChatToggle<cr>", { desc = "Toggle Chat" })
+      vim.keymap.set({ "n", "i" }, "<C-g>gp", "<cmd>GpPopup<cr>", { desc = "Popup" })
+      vim.keymap.set({ "n", "i" }, "<C-g>ww", "<cmd>GpWhisper<cr>", { desc = "Whisper" })
     end,
   },
 }
