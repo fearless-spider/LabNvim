@@ -108,7 +108,7 @@ return {
           },
           {
             provider = "ollama",
-            name = "ChatOllamaLlama3.1-8B",
+            name = "ChatOllamaLlama3.2-8B",
             chat = true,
             command = false,
             -- string with model name or table with model name and parameters
@@ -121,6 +121,44 @@ return {
             -- system prompt (use this to specify the persona/role of the AI)
             system_prompt = "You are a general AI assistant.",
           },
+          {
+            provider = "ollama",
+            name = "CodeOllamaLlama3.1-8B",
+            chat = false,
+            command = true,
+            -- string with model name or table with model name and parameters
+            model = {
+              model = "llama3.1",
+              temperature = 0.4,
+              top_p = 1,
+              min_p = 0.05,
+            },
+            -- system prompt (use this to specify the persona/role of the AI)
+            system_prompt = require("gp.defaults").code_system_prompt,
+          },
+        },
+        hooks = {
+          UnitTests = function(gp, params)
+            local template = "I have the following code from {{filename}}:\n\n"
+              .. "```{{filetype}}\n{{selection}}\n```\n\n"
+              .. "Please respond by writing table driven unit tests for the code above."
+            local agent = gp.get_command_agent()
+            gp.Prompt(params, gp.Target.vnew, agent, template)
+          end,
+          Explain = function(gp, params)
+            local template = "I have the following code from {{filename}}:\n\n"
+              .. "```{{filetype}}\n{{selection}}\n```\n\n"
+              .. "Please respond by explaining the code above."
+            local agent = gp.get_chat_agent()
+            gp.Prompt(params, gp.Target.popup, agent, template)
+          end,
+          CodeReview = function(gp, params)
+            local template = "I have the following code from {{filename}}:\n\n"
+              .. "```{{filetype}}\n{{selection}}\n```\n\n"
+              .. "Please analyze for code smells and suggest improvements."
+            local agent = gp.get_chat_agent()
+            gp.Prompt(params, gp.Target.enew "markdown", agent, template)
+          end,
         },
       }
       require("gp").setup(conf)
@@ -131,6 +169,9 @@ return {
       vim.keymap.set({ "n", "i" }, "<C-g>t", "<cmd>GpChatToggle<cr>", { desc = "Toggle Chat" })
       vim.keymap.set({ "n", "i" }, "<C-g>gp", "<cmd>GpPopup<cr>", { desc = "Popup" })
       vim.keymap.set({ "n", "i" }, "<C-g>ww", "<cmd>GpWhisper<cr>", { desc = "Whisper" })
+      vim.keymap.set({ "n" }, "<C-g>gu", "<cmd>GpUnitTests<cr>", { desc = "Unit Tests" })
+      vim.keymap.set({ "v" }, "<C-g>ge", ":<C-u>'<,'>GpExplain<cr>", { desc = "Explain" })
+      vim.keymap.set({ "v" }, "<C-g>gv", ":<C-u>'<,'>GpCodeReview<cr>", { desc = "Code Review" })
     end,
   },
 }
