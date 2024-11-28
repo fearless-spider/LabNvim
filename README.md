@@ -21,6 +21,7 @@ LabNvim is an aesthetic and feature-rich neovim config that is extensible and ea
 * twilight
 * obsidian
 * markdown
+* gp.nvim
 
 ## Color schemes:
 
