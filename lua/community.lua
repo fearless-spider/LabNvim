@@ -21,6 +21,7 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.ruby" },
+  { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.color.twilight-nvim" },
   { import = "astrocommunity.colorscheme.fluoromachine-nvim" },
   { import = "astrocommunity.colorscheme.neofusion-nvim" },
