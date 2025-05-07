@@ -32,6 +32,8 @@ LabNvim is an aesthetic and feature-rich neovim config that is extensible and ea
 - poimandres
 - eldritch
 
+![labnvim start](https://github.com/fearless-spider/LabNvim/blob/master/labnvim5.png?raw=true)
+
 ![labnvim start](https://github.com/fearless-spider/LabNvim/blob/master/labnvim_start.png?raw=true)
 
 ![labnvim start](https://github.com/fearless-spider/LabNvim/blob/master/labnvim_code.png?raw=true)
